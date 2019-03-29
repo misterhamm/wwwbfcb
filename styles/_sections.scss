@@ -1,0 +1,54 @@
+/// <reference path="_variables.scss"/>
+
+$section-skew: 100px;
+
+section {
+  margin-top: -$section-skew;
+  padding: calc(#{$section-skew} + 40px) 0;
+  position: relative;
+  clip-path: polygon(0 $section-skew, 100% 0, 100% calc(100% - #{$section-skew}), 0 100%);
+}
+
+.header {
+  background-color: transparentize($secondary, 0.3);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$section-skew}), 0 100%);
+  color: $white;
+  margin-top: 0;
+  //padding-bottom: calc(#{$section-skew} + 40px);
+  padding-top: 80px;
+  text-align: center;
+  
+  h1 {
+    color: $white;
+    margin: 0;
+  }
+
+  p {
+    background-color: rgba(0,0,0,0.4);
+    margin: 0;
+    margin-top: 80px;
+    padding: 40px;
+  }
+}
+
+.values {
+  background-color: transparentize($primary, 0.3);
+  font-weight: bold;
+  h2,h3 {
+    color: $white;
+  }
+}
+
+.focus {
+  background-color: transparentize($yellow, 0.3);
+  clip-path: polygon(0 $section-skew, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+  
+  img {
+    height: 100px;
+    position: absolute;
+    right: 75px;
+    bottom: 50px;
+    width: auto;
+  }
+}
